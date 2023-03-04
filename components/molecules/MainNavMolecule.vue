@@ -22,7 +22,7 @@
         :class="
           MobileNav
             ? 'font-semibold text-black text-3xl block justify-between items-center w-full'
-            : 'font-medium text-black uppercase text-sm tracking-wider'
+            : 'text-black uppercase text-sm tracking-wider'
         "
       >
         {{ Link.attributes.Title }}

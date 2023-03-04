@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="min-h-20 flex items-center" :class="dropdownIsActive ? '' : ''">
+    <div class="min-h-24 flex items-center" :class="dropdownIsActive ? '' : ''">
       <div
         v-if="navigation"
         class="flex items-center justify-between z-70 bg-white w-full"
         :class="dropdownIsActive ? 'fixed' : 'relative'"
       >
         <a href="/" v-if="navigation.Logo" class="pl-4 w-32 block mb-1">
-          <ImageMolecule :Image="navigation.Logo" />
+          <Logo :HeroActive="HeroActive ? true : false" />
         </a>
         <div class="flex items-center py-4">
           <div class="mr-1">
@@ -108,6 +108,7 @@ import ImageMolecule from "~/components/molecules/ImageMolecule.vue";
 import ButtonMolecule from "~/components/molecules/ButtonMolecule.vue";
 import MainNavMolecule from "~/components/molecules/MainNavMolecule.vue";
 import TopNavMolecule from "~/components/molecules/TopNavMolecule.vue";
+import Logo from "~/components/partials/Logo.vue";
 
 export default {
   apollo: {
@@ -124,6 +125,7 @@ export default {
     ButtonMolecule,
     MainNavMolecule,
     TopNavMolecule,
+    Logo
   },
 
   data() {

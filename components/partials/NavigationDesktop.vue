@@ -1,8 +1,8 @@
 <template>
   <div>
     <nav v-if="navigation" class="flex items-top justify-between">
-      <a href="/" v-if="navigation.Logo" class="pl-4 py-4 min-w-max block">
-        <ImageMolecule :Image="navigation.Logo" />
+      <a href="/" v-if="navigation.Logo" class="pl-4 py-8 w-40 block">
+        <Logo :HeroActive="HeroActive ? true : false" />
       </a>
       <div class="flex items-stretch">
         <div
@@ -56,13 +56,17 @@ import ImageMolecule from "~/components/molecules/ImageMolecule.vue";
 import MainNavMolecule from "~/components/molecules/MainNavMolecule.vue";
 import TopNavMolecule from "~/components/molecules/TopNavMolecule.vue";
 import DropdownMenuMolecule from "~/components/molecules/DropdownMenuMolecule.vue";
+import Logo from "~/components/partials/Logo.vue";
 
 export default {
+  props: ["HeroActive"],
+  
   components: {
     ImageMolecule,
     MainNavMolecule,
     TopNavMolecule,
     DropdownMenuMolecule,
+    Logo
   },
 
   apollo: {

@@ -1,7 +1,7 @@
 <template>
   <header id="Header" class="Header z-50">
-    <NavigationMobile class="lg:hidden" />
-    <NavigationDesktop class="hidden lg:block" />
+    <NavigationMobile class="lg:hidden" :HeroActive="HeroActive ? true : false" />
+    <NavigationDesktop class="hidden lg:block" :HeroActive="HeroActive ? true : false" />
     <HeroBannerBlock v-if="HeroActive" />
     <CookieControl>
       <template v-slot:modal>
