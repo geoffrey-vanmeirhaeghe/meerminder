@@ -22,13 +22,13 @@
         :class="
           MobileNav
             ? 'font-semibold text-black text-3xl block justify-between items-center w-full'
-            : 'font-medium text-black hover:text-secondary-500'
+            : 'font-medium text-black uppercase text-sm tracking-wider'
         "
       >
         {{ Link.attributes.Title }}
       </a>
     </li>
-    <ButtonMolecule v-if="Button" :Button="Button" class="ml-7 my-3 text-sm" />
+    <!-- <ButtonMolecule v-if="Button" :Button="Button" class="ml-7 my-3 text-sm" /> -->
   </ul>
 </template>
 

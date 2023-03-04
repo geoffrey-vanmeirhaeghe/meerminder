@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav v-if="navigation" class="flex items-top justify-between">
-      <a href="/" v-if="navigation.Logo" class="pl-4 py-4 mt-2 min-w-max block">
+      <a href="/" v-if="navigation.Logo" class="pl-4 py-4 min-w-max block">
         <ImageMolecule :Image="navigation.Logo" />
       </a>
       <div class="flex items-stretch">
@@ -26,7 +26,7 @@
           >
           </MainNavMolecule>
         </div>
-        <DropdownMenuMolecule
+        <!-- <DropdownMenuMolecule
           v-if="navigation.DropdownMenu"
           :Links="
             navigation.DropdownMenu.MainPages.data
@@ -41,7 +41,7 @@
           :Logo="
             navigation.DropdownMenu.Logo ? navigation.DropdownMenu.Logo : ''
           "
-        />
+        /> -->
       </div>
     </nav>
   </div>

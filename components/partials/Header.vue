@@ -1,5 +1,5 @@
 <template>
-  <header id="Header" class="Header z-50 border-b border-gray-200">
+  <header id="Header" class="Header z-50">
     <NavigationMobile class="lg:hidden" />
     <NavigationDesktop class="hidden lg:block" />
     <HeroBannerBlock v-if="HeroActive" />

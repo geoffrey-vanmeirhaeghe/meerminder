@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <div class="w-full overflow-hidden">
       <ModulePageBlocks
         :ModulePage="
@@ -47,6 +48,7 @@
         />
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 

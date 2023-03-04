@@ -25,28 +25,6 @@ export const Navigation = gql`
               }
             }
           }
-          MainNavCtaButton {
-            ButtonText
-            page {
-              data {
-                attributes {
-                  Title
-                  Slug
-                }
-              }
-            }
-            OpenInNewTab
-            Style
-            ExternalLink
-          }
-          TopnavPages {
-            data {
-              attributes {
-                Title
-                Slug
-              }
-            }
-          }
           DropdownMenu {
             MainPages {
               data {
@@ -85,13 +63,6 @@ export const Navigation = gql`
           }
           HeaderHero {
             HeroTitle
-            HeroBackground {
-              data {
-                attributes {
-                  url
-                }
-              }
-            }
             HeroSubText
             HeroCtaButton {
               ButtonText

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="min-h-20" :class="dropdownIsActive ? '' : ''">
+    <div class="min-h-20 flex items-center" :class="dropdownIsActive ? '' : ''">
       <div
         v-if="navigation"
         class="flex items-center justify-between z-70 bg-white w-full"
         :class="dropdownIsActive ? 'fixed' : 'relative'"
       >
-        <a href="/" v-if="navigation.Logo" class="pl-4 w-24 block mb-1">
+        <a href="/" v-if="navigation.Logo" class="pl-4 w-32 block mb-1">
           <ImageMolecule :Image="navigation.Logo" />
         </a>
         <div class="flex items-center py-4">
