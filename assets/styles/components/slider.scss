@@ -1,0 +1,36 @@
+@import "node_modules/vue-slick-carousel/dist/vue-slick-carousel";
+
+.slick-slider {
+  position: relative;
+}
+
+.slick-arrow {
+  @apply block z-50 absolute opacity-75 transition-all duration-500;
+
+  &:hover {
+    @apply opacity-100 transition-all duration-500;
+  }
+
+  &.slick-prev {
+    @apply left-2 w-16 h-16 top-1/4;
+
+    &:before {
+      @apply text-5xl;
+    }
+
+    @screen lg {
+      @apply top-1/2 left-5;
+    }
+  }
+  &.slick-next {
+    @apply right-2 w-16 h-16 top-1/4;
+
+    &:before {
+      @apply text-5xl;
+    }
+
+    @screen lg {
+      @apply top-1/2 right-5;
+    }
+  }
+}

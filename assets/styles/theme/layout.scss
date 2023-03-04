@@ -1,0 +1,63 @@
+// Standard layout settings
+
+.container {
+  @apply mx-auto px-4;
+}
+
+// Conditional spacing
+
+.spacing-None {
+  @apply mt-0;
+}
+
+.spacing-Small {
+  @apply mt-8;
+}
+
+.spacing-Normal {
+  @apply mt-16;
+}
+
+.spacing-Large {
+  @apply mt-24;
+}
+
+.spacing-Ultra {
+  @apply mt-48;
+}
+
+// Conditional alignment
+
+.alignment-left {
+  @apply justify-start;
+}
+.alignment-center {
+  @apply justify-center;
+}
+.alignment-right {
+  @apply justify-end;
+}
+
+// Conditional block width
+
+.FullWidth {
+  @apply w-full;
+}
+
+.WideWidth {
+  @apply container;
+}
+
+.SmallWidth {
+  @apply max-w-2xl mx-auto;
+
+  @screen md {
+    .container {
+      @apply px-0;
+
+      &-with-image {
+        @apply px-4;
+      }
+    }
+  }
+}

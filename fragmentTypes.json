@@ -1,0 +1,351 @@
+{
+  "__schema": {
+    "types": [
+      {
+        "kind": "UNION",
+        "name": "BlogBlocksDynamicZone",
+        "possibleTypes": [
+          {
+            "name": "ComponentBlocksBannerCta"
+          },
+          {
+            "name": "ComponentBlocksButtonRow"
+          },
+          {
+            "name": "ComponentBlocksCards"
+          },
+          {
+            "name": "ComponentBlocksContentGrid"
+          },
+          {
+            "name": "ComponentBlocksHeading"
+          },
+          {
+            "name": "ComponentBlocksImageBlock"
+          },
+          {
+            "name": "ComponentBlocksListWithIcons"
+          },
+          {
+            "name": "ComponentBlocksSlider"
+          },
+          {
+            "name": "ComponentBlocksTestimonials"
+          },
+          {
+            "name": "ComponentBlocksText"
+          },
+          {
+            "name": "ComponentBlocksTextColumns"
+          },
+          {
+            "name": "ComponentBlocksTextWithImage"
+          },
+          {
+            "name": "ComponentBlocksTextWithLinks"
+          },
+          {
+            "name": "ComponentBlocksTimeline"
+          },
+          {
+            "name": "ComponentBlocksTitleWithText"
+          },
+          {
+            "name": "ComponentBlocksUsps"
+          },
+          {
+            "name": "ComponentBlocksVideo"
+          },
+          {
+            "name": "Error"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "CaseBlocksDynamicZone",
+        "possibleTypes": [
+          {
+            "name": "ComponentBlocksBannerCta"
+          },
+          {
+            "name": "ComponentBlocksButtonRow"
+          },
+          {
+            "name": "ComponentBlocksCards"
+          },
+          {
+            "name": "ComponentBlocksContentGrid"
+          },
+          {
+            "name": "ComponentBlocksHeading"
+          },
+          {
+            "name": "ComponentBlocksImageBlock"
+          },
+          {
+            "name": "ComponentBlocksListWithIcons"
+          },
+          {
+            "name": "ComponentBlocksSlider"
+          },
+          {
+            "name": "ComponentBlocksTestimonials"
+          },
+          {
+            "name": "ComponentBlocksText"
+          },
+          {
+            "name": "ComponentBlocksTextColumns"
+          },
+          {
+            "name": "ComponentBlocksTextWithImage"
+          },
+          {
+            "name": "ComponentBlocksTextWithLinks"
+          },
+          {
+            "name": "ComponentBlocksTimeline"
+          },
+          {
+            "name": "ComponentBlocksTitleWithText"
+          },
+          {
+            "name": "ComponentBlocksUsps"
+          },
+          {
+            "name": "ComponentBlocksVideo"
+          },
+          {
+            "name": "Error"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "GenericMorph",
+        "possibleTypes": [
+          {
+            "name": "Blog"
+          },
+          {
+            "name": "BlogCategory"
+          },
+          {
+            "name": "Case"
+          },
+          {
+            "name": "CasesCategory"
+          },
+          {
+            "name": "ComponentBlocksBannerCta"
+          },
+          {
+            "name": "ComponentBlocksButtonRow"
+          },
+          {
+            "name": "ComponentBlocksCards"
+          },
+          {
+            "name": "ComponentBlocksContentGrid"
+          },
+          {
+            "name": "ComponentBlocksHeading"
+          },
+          {
+            "name": "ComponentBlocksImageBlock"
+          },
+          {
+            "name": "ComponentBlocksListWithIcons"
+          },
+          {
+            "name": "ComponentBlocksSlider"
+          },
+          {
+            "name": "ComponentBlocksTestimonials"
+          },
+          {
+            "name": "ComponentBlocksText"
+          },
+          {
+            "name": "ComponentBlocksTextColumns"
+          },
+          {
+            "name": "ComponentBlocksTextWithImage"
+          },
+          {
+            "name": "ComponentBlocksTextWithLinks"
+          },
+          {
+            "name": "ComponentBlocksTimeline"
+          },
+          {
+            "name": "ComponentBlocksTitleWithText"
+          },
+          {
+            "name": "ComponentBlocksUsps"
+          },
+          {
+            "name": "ComponentBlocksVideo"
+          },
+          {
+            "name": "ComponentMoleculesGridBlock"
+          },
+          {
+            "name": "ComponentMoleculesHeading"
+          },
+          {
+            "name": "ComponentMoleculesIconWithText"
+          },
+          {
+            "name": "ComponentMoleculesImageBlock"
+          },
+          {
+            "name": "ComponentMoleculesLinkRow"
+          },
+          {
+            "name": "ComponentMoleculesPrimaryButton"
+          },
+          {
+            "name": "ComponentMoleculesSingleCard"
+          },
+          {
+            "name": "ComponentMoleculesSingleSlide"
+          },
+          {
+            "name": "ComponentMoleculesTestimonialBlock"
+          },
+          {
+            "name": "ComponentMoleculesTextBlock"
+          },
+          {
+            "name": "ComponentMoleculesTextColumn"
+          },
+          {
+            "name": "ComponentMoleculesTimelineMarker"
+          },
+          {
+            "name": "ComponentMoleculesUspBlock"
+          },
+          {
+            "name": "ComponentPartialsHeaderDropdownMenu"
+          },
+          {
+            "name": "ComponentPartialsHeaderHero"
+          },
+          {
+            "name": "ComponentPartialsMetadata"
+          },
+          {
+            "name": "ComponentSettingsSettingsAlignment"
+          },
+          {
+            "name": "ComponentSettingsSettingsOrder"
+          },
+          {
+            "name": "ComponentSettingsSettingsSpacing"
+          },
+          {
+            "name": "ComponentSettingsSettingsSpacingWidth"
+          },
+          {
+            "name": "Contact"
+          },
+          {
+            "name": "Footer"
+          },
+          {
+            "name": "I18NLocale"
+          },
+          {
+            "name": "Navigation"
+          },
+          {
+            "name": "Order"
+          },
+          {
+            "name": "Page"
+          },
+          {
+            "name": "Product"
+          },
+          {
+            "name": "ProductCategory"
+          },
+          {
+            "name": "UploadFile"
+          },
+          {
+            "name": "UsersPermissionsPermission"
+          },
+          {
+            "name": "UsersPermissionsRole"
+          },
+          {
+            "name": "UsersPermissionsUser"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "PageBlocksDynamicZone",
+        "possibleTypes": [
+          {
+            "name": "ComponentBlocksBannerCta"
+          },
+          {
+            "name": "ComponentBlocksButtonRow"
+          },
+          {
+            "name": "ComponentBlocksCards"
+          },
+          {
+            "name": "ComponentBlocksContentGrid"
+          },
+          {
+            "name": "ComponentBlocksHeading"
+          },
+          {
+            "name": "ComponentBlocksImageBlock"
+          },
+          {
+            "name": "ComponentBlocksListWithIcons"
+          },
+          {
+            "name": "ComponentBlocksSlider"
+          },
+          {
+            "name": "ComponentBlocksTestimonials"
+          },
+          {
+            "name": "ComponentBlocksText"
+          },
+          {
+            "name": "ComponentBlocksTextColumns"
+          },
+          {
+            "name": "ComponentBlocksTextWithImage"
+          },
+          {
+            "name": "ComponentBlocksTextWithLinks"
+          },
+          {
+            "name": "ComponentBlocksTimeline"
+          },
+          {
+            "name": "ComponentBlocksTitleWithText"
+          },
+          {
+            "name": "ComponentBlocksUsps"
+          },
+          {
+            "name": "ComponentBlocksVideo"
+          },
+          {
+            "name": "Error"
+          }
+        ]
+      }
+    ]
+  }
+}

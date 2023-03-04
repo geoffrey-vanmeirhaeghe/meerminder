@@ -1,0 +1,141 @@
+body {
+  @apply text-gray-600;
+}
+
+p {
+  @apply text-base mb-4;
+
+  @screen md {
+    @apply text-lg;
+  }
+
+  & + p {
+    @apply mb-0;
+  }
+}
+
+h1 {
+  @apply text-4xl leading-tight mb-4;
+
+  @screen md {
+    @apply text-5xl;
+  }
+}
+
+h2 {
+  @apply text-3xl leading-tight mb-4;
+
+  @screen md {
+    @apply text-4xl;
+  }
+}
+
+h3 {
+  @apply text-2xl leading-tight mb-4;
+
+  @screen md {
+    @apply text-3xl;
+  }
+}
+
+h4 {
+  @apply text-xl leading-tight mb-4;
+
+  @screen md {
+    @apply text-2xl;
+  }
+}
+
+ul,
+ol {
+  @apply text-base leading-tight text-gray-600 pl-6;
+
+  @screen md {
+    @apply text-lg;
+  }
+
+  li {
+    @apply relative;
+  }
+
+  li + li {
+    @apply mt-3;
+  }
+}
+
+ul {
+  @apply pl-0;
+
+  li {
+    @apply pl-6;
+
+    &:before {
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
+
+      @apply absolute font-black left-0 text-gray-400 text-base;
+    }
+  }
+
+  &.icon-picker {
+    li {
+      @apply pl-0;
+
+      &::before {
+        @apply hidden;
+      }
+    }
+  }
+
+  &.no-default-icon {
+    li {
+      &::before {
+        @apply hidden;
+      }
+    }
+  }
+}
+
+ol {
+  @apply list-decimal;
+
+  li {
+    @apply pl-2;
+  }
+}
+
+a {
+  @apply text-blue-500 underline hover:no-underline transition duration-300;
+}
+
+blockquote {
+  @apply bg-gray-100 border-l-8 border-gray-200 py-4 px-4;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+.text-tiny {
+  @apply text-sm;
+}
+
+.text-small {
+  @apply text-base;
+}
+
+.text-big {
+  @apply text-xl;
+}
+
+.text-huge {
+  @apply text-2xl;
+}

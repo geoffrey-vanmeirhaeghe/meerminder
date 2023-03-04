@@ -1,0 +1,83 @@
+// Buttons
+
+.Primary {
+  &Button {
+    @apply bg-blue-500 text-white rounded px-6 py-3 no-underline;
+
+    &:hover {
+      @apply bg-green-500 text-white;
+    }
+
+    &Outline {
+      @apply bg-transparent border border-blue-500 text-blue-500 rounded px-6 py-3 no-underline;
+
+      &.inverted-colors {
+        @apply border-white text-white;
+      }
+
+      &:hover {
+        @apply bg-green-500 text-white border-green-500;
+      }
+
+      &Chevron {
+        @apply bg-transparent border border-blue-500 text-blue-500 rounded px-6 py-3 no-underline;
+
+        &.inverted-colors {
+          @apply border-white text-white;
+        }
+
+        &:hover {
+          @apply bg-green-500 text-white border-green-500;
+        }
+      }
+    }
+
+    &Chevron {
+      @apply bg-blue-500 text-white rounded px-6 py-3 no-underline;
+
+      &:hover {
+        @apply bg-green-500 text-white;
+      }
+    }
+  }
+}
+
+.Secondary {
+  &Button {
+    @apply bg-green-700 transform skew-x-0 rotate-0 px-6 py-6 rounded text-white no-underline;
+
+    &Chevron {
+      @apply bg-green-700 transform skew-x-0 rotate-0 px-6 py-6 rounded text-white no-underline;
+
+      &:hover {
+        @apply bg-green-500 text-white skew-x-6 rotate-2;
+      }
+    }
+
+    &:hover {
+      @apply bg-green-500 text-white skew-x-6 rotate-2;
+    }
+  }
+}
+
+// Form
+
+form {
+  label {
+    @apply uppercase text-xs font-medium opacity-40;
+
+    &[for="Consent"] {
+      @apply text-sm font-normal opacity-100 normal-case;
+    }
+  }
+
+  input,
+  textarea {
+    @apply p-2 px-3;
+  }
+
+  label + input,
+  textarea {
+    @apply mt-1;
+  }
+}

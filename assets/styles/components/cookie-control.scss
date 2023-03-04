@@ -1,0 +1,120 @@
+.cookieControl {
+  .cookieControl__Bar--bottom-full,
+  .cookieControl__Bar--bottom-left,
+  .cookieControl__Bar--bottom-right {
+    bottom: 15px !important;
+
+    @screen md {
+      bottom: 20px !important;
+    }
+  }
+
+  // Cookie banner -- Banner
+  &__Bar {
+    @apply flex items-center;
+
+    &Container {
+      max-width: calc(95vw - 16px);
+      @apply bg-blue-500 text-white rounded-lg;
+    }
+  }
+
+  //   Cookie Banner -- Modal
+  // Pop-up overlay (background)
+  .cookieControl__Modal {
+    @apply bg-black bg-opacity-75;
+  }
+
+  // Pop-up with content
+  .cookieControl__ModalContent {
+    max-height: 95vh;
+    max-width: calc(95vw - 16px);
+    @apply bg-white py-10 rounded-lg mx-auto top-4 bottom-4;
+
+    @screen md {
+      @apply max-w-xl;
+    }
+  }
+
+  // Titles
+  // First title
+  .cookieControl__ModalContent h3:first-of-type {
+    @apply font-bold mb-3 text-2xl;
+  }
+
+  // All titles
+  .cookieControl__ModalContent h3 {
+    @apply mt-6 mb-3 text-xl;
+  }
+
+  // Text
+  p {
+    @apply text-sm;
+  }
+
+  ul li:before {
+    @apply hidden;
+  }
+
+  ul li {
+    @apply pl-0 text-sm;
+  }
+
+  // Unsaved settings alert text
+  .cookieControl__ModalUnsaved {
+    @apply text-white;
+  }
+
+  // Category title
+  .cookieControl__ModalInputWrapper {
+    @apply items-center;
+
+    .cookieControl__ModalCookieName {
+      @apply text-sm;
+    }
+  }
+
+  // Buttons
+  .cookieControl__ModalButtons {
+    @apply mt-8;
+  }
+
+  // Blue bg buttons
+  .cookieControl__ModalClose,
+  .cookieControl__Modal button {
+    @apply bg-blue-500 text-white rounded;
+  }
+
+  // White bg buttons
+  .cookieControl__Bar button {
+    @apply bg-white text-blue-500 rounded;
+  }
+
+  // Switch buttons
+  // Inactives
+  .cookieControl__ModalContent input:checked:disabled + label {
+    @apply bg-gray-200;
+  }
+
+  .cookieControl__ModalContent input:checked:disabled + label:before {
+    @apply bg-gray-800;
+  }
+
+  // Actives
+  .cookieControl .cookieControl__ModalContent input:checked + label {
+    @apply border border-gray-200;
+  }
+
+  .cookieControl__ModalContent label {
+    @apply border border-gray-200;
+  }
+
+  // Unchecked
+  .cookieControl__ModalContent label:before {
+    @apply bg-gray-300;
+  }
+
+  .cookieControl__ModalContent input:checked + label:before {
+    @apply bg-blue-500;
+  }
+}

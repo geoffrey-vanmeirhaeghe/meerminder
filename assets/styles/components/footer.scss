@@ -1,0 +1,23 @@
+.Footer {
+  p {
+    @apply text-sm text-blue-900;
+
+    strong {
+      @apply font-semibold;
+    }
+  }
+  li a {
+    @apply no-underline text-base leading-none;
+
+    &:hover {
+      @apply text-green-500;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply leading-normal;
+  }
+}
