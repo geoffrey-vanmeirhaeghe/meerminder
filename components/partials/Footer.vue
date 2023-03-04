@@ -14,11 +14,11 @@
         />
       </div>
     </div>
-    <div class="bg-blue-100 sm:py-6">
+    <div class="bg-primary-100 sm:py-6">
       <div class="container">
         <div class="flex flex-wrap items-start">
           <div
-            class="py-8 w-full sm:w-1/3 xl:w-1/4 sm:pr-6 border-b border-blue-200 sm:border-b-0"
+            class="py-8 w-full sm:w-1/3 xl:w-1/4 sm:pr-6 border-b border-primary-200 sm:border-b-0"
           >
             <a
               href="/"
@@ -41,12 +41,12 @@
             </div>
           </div>
           <div
-            class="w-full sm:w-2/3 xl:w-3/4 sm:pl-10 md:pl-20 my-6 sm:border-l border-blue-200"
+            class="w-full sm:w-2/3 xl:w-3/4 sm:pl-10 md:pl-20 my-6 sm:border-l border-primary-200"
           >
             <div>
               <h4
                 v-if="footer.FooterTitle"
-                class="font-light text-blue-900 mb-0 max-w-md lg:max-w-xl xl:max-w-2xl text-2xl lg:text-3xl xl:text-4xl"
+                class="font-light text-black mb-0 max-w-md lg:max-w-xl xl:max-w-2xl text-2xl lg:text-3xl xl:text-4xl"
               >
                 {{ footer.FooterTitle }}
               </h4>
@@ -104,14 +104,14 @@
               :key="Link.id"
               class="sm:inline-block pl-0 my-2 sm:my-0 leading-tight mr-10"
             >
-              <a :href="Link.attributes.Slug" class="text-blue-400">
+              <a :href="Link.attributes.Slug" class="text-primary-400">
                 {{ Link.attributes.Title }}
               </a>
             </li>
           </ul>
           <div class="flex items-center">
             <button
-              class="mr-5 whitespace-nowrap text-white bg-blue-300 px-2 py-2 rounded text-xs hover:bg-blue-500 transition duration-300"
+              class="mr-5 whitespace-nowrap text-white bg-primary-300 px-2 py-2 rounded text-xs hover:bg-primary-500 transition duration-300"
               v-on:click="$cookies.modal = true"
             >
               Cookies aanpassen
@@ -121,7 +121,7 @@
               <a
                 href="https://www.meerminder.be"
                 target="_blank"
-                class="no-underline py-1 ml-1 border-b border-blue-900 text-blue-900 hover:text-green-500 hover:border-green-500"
+                class="no-underline py-1 ml-1 border-b border-primary-500 text-black hover:text-secondary-500 hover:border-secondary-500"
                 >Meerminder</a
               >
             </p>

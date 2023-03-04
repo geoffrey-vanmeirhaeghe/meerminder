@@ -15,7 +15,7 @@
 
     &Container {
       max-width: calc(95vw - 16px);
-      @apply bg-blue-500 text-white rounded-lg;
+      @apply bg-primary-500 text-white rounded-lg;
     }
   }
 
@@ -82,12 +82,12 @@
   // Blue bg buttons
   .cookieControl__ModalClose,
   .cookieControl__Modal button {
-    @apply bg-blue-500 text-white rounded;
+    @apply bg-primary-500 text-white rounded;
   }
 
   // White bg buttons
   .cookieControl__Bar button {
-    @apply bg-white text-blue-500 rounded;
+    @apply bg-white text-primary-500 rounded;
   }
 
   // Switch buttons
@@ -115,6 +115,6 @@
   }
 
   .cookieControl__ModalContent input:checked + label:before {
-    @apply bg-blue-500;
+    @apply bg-primary-500;
   }
 }

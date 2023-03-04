@@ -21,8 +21,8 @@
         class="no-underline"
         :class="
           MobileNav
-            ? 'font-semibold text-blue-900 text-3xl block justify-between items-center w-full'
-            : 'font-medium text-gray-900 hover:text-green-500'
+            ? 'font-semibold text-black text-3xl block justify-between items-center w-full'
+            : 'font-medium text-black hover:text-secondary-500'
         "
       >
         {{ Link.attributes.Title }}

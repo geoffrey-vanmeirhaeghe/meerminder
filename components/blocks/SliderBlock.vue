@@ -10,7 +10,7 @@
               class="object-cover lg:h-screen w-full"
             />
             <div
-              class="flex flex-col lg:max-w-3xl lg:absolute bottom-4 xl:bottom-8 left-4 xl:left-24 right-4 xl:right-8 p-8 bg-blue-500 lg:bg-blue-500"
+              class="flex flex-col lg:max-w-3xl lg:absolute bottom-4 xl:bottom-8 left-4 xl:left-24 right-4 xl:right-8 p-8 bg-primary-500 lg:bg-primary-500"
             >
               <h2
                 v-if="Slide.Title"

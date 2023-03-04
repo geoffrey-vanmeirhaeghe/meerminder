@@ -9,13 +9,13 @@
       ></ImageMolecule>
       <div
         v-else
-        class="w-full md:w-1/2 h-72 sm:h-96 md:h-144 object-cover bg-blue-100"
+        class="w-full md:w-1/2 h-72 sm:h-96 md:h-144 object-cover bg-primary-100"
       ></div>
       <div class="container mt-6 md:mt-12">
         <h1 v-if="blogs.data[0].attributes.Title" class="mb-0">
           {{ blogs.data[0].attributes.Title }}
         </h1>
-        <div class="font-medium text-gray-500 flex flex-wrap mt-3">
+        <div class="font-medium text-black flex flex-wrap mt-3">
           <p v-if="blogs.data[0].attributes.Date" class="text-xs mb-0 mr-4">
             {{ blogs.data[0].attributes.Date }}
           </p>
@@ -25,7 +25,7 @@
             v-for="category in blogs.data[0].attributes.blog_categories.data"
             :key="category.id"
             :href="'category/' + category.attributes.slug"
-            class="text-xs px-3 py-1 rounded-full border border-blue-200 mr-4 mb-0 no-underline text-blue-400 hover:bg-blue-400 hover:text-white hover:border-blue-400"
+            class="text-xs px-3 py-1 rounded-full border border-primary-200 mr-4 mb-0 no-underline text-primary-400 hover:bg-primary-400 hover:text-white hover:border-primary-400"
             >{{ category.attributes.Title }}</a
           >
         </div>

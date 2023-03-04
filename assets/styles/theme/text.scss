@@ -49,7 +49,7 @@ h4 {
 
 ul,
 ol {
-  @apply text-base leading-tight text-gray-600 pl-6;
+  @apply text-base leading-tight text-black pl-6;
 
   @screen md {
     @apply text-lg;
@@ -74,7 +74,7 @@ ul {
       content: "\f054";
       font-family: "Font Awesome 5 Free";
 
-      @apply absolute font-black left-0 text-gray-400 text-base;
+      @apply absolute font-black left-0 text-black text-base;
     }
   }
 
@@ -106,7 +106,7 @@ ol {
 }
 
 a {
-  @apply text-blue-500 underline hover:no-underline transition duration-300;
+  @apply text-primary-500 underline hover:no-underline transition duration-300;
 }
 
 blockquote {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="p-7 px-8 bg-blue-500 hidden md:flex items-center cursor-pointer h-full"
+      class="p-7 px-8 bg-primary-500 hidden md:flex items-center cursor-pointer h-full"
       v-on:click="dropdownIsActive = !dropdownIsActive"
       @click="lockBodyScroll()"
     >
@@ -20,7 +20,7 @@
       "
     >
       <div
-        class="transition-all duration-300 ease-in h-full bg-blue-100 rounded-xl"
+        class="transition-all duration-300 ease-in h-full bg-primary-100 rounded-xl"
       >
         <div class="relative h-full p-10">
           <button
@@ -30,10 +30,10 @@
           >
             <div class="w-5 transform scale-150">
               <div
-                class="block w-full rounded-full h-px p-px bg-blue-900 mb-2 transform rotate-45 translate-x-1 -translate-y-1 origin-top-left"
+                class="block w-full rounded-full h-px p-px bg-primary-500 mb-2 transform rotate-45 translate-x-1 -translate-y-1 origin-top-left"
               ></div>
               <div
-                class="block w-full rounded-full h-px p-px bg-blue-900 mt-2 transform -rotate-45 translate-x-1 -translate-y-px origin-bottom-left"
+                class="block w-full rounded-full h-px p-px bg-primary-500 mt-2 transform -rotate-45 translate-x-1 -translate-y-px origin-bottom-left"
               ></div>
             </div>
           </button>
@@ -62,7 +62,7 @@
                   >
                     <a
                       :href="Link.attributes.Slug"
-                      class="no-underline text-gray-700 font-bold"
+                      class="no-underline text-black font-bold"
                       :class="
                         dropdownIsActive == true
                           ? 'whitespace-wrap'

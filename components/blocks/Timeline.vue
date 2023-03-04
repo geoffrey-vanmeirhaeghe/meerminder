@@ -18,7 +18,7 @@
             <div class="relative min-w-1">
               <p
                 v-if="Marker.Label"
-                class="z-10 relative md:py-3 mb-0 bg-white text-center text-sm font-semibold text-gray-400"
+                class="z-10 relative md:py-3 mb-0 bg-white text-center text-sm font-semibold text-black"
               >
                 {{ Marker.Label }}
               </p>

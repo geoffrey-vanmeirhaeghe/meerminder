@@ -12,7 +12,7 @@
             : ''
         "
         :target="Card.OpenInNewTab ? '_blank' : ''"
-        class="no-underline text-gray-900"
+        class="no-underline text-black"
       >
         <img
           v-if="Card.Image.data !== null"
@@ -27,7 +27,7 @@
           v-if="Card.Label || Card.Title"
           class="p-4 border-t border-gray-200"
         >
-          <p v-if="Card.Label" class="text-sm font-bold mb-2 text-blue-500">
+          <p v-if="Card.Label" class="text-sm font-bold mb-2 text-primary-500">
             {{ Card.Label }}
           </p>
           <p v-if="Card.Title" class="text-base">{{ Card.Title }}</p>

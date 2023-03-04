@@ -13,8 +13,8 @@
         <div>
           <font-awesome-icon
             :icon="['fas', 'tag']"
-            class="mr-3 text-sm text-blue-500"
-          /><span class="font-medium text-gray-500 mr-4 hidden md:inline-block"
+            class="mr-3 text-sm text-primary-500"
+          /><span class="font-medium text-black mr-4 hidden md:inline-block"
             >Filter:</span
           >
         </div>

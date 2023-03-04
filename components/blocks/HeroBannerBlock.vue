@@ -18,7 +18,7 @@
     ></div>
     <div
       class="md:flex flex-row-reverse min-h-144 py-8 px-4 lg:px-8 justify-center items-center container-with-image relative"
-      :class="heroBanner.HeroBackground.data ? '' : 'bg-blue-100'"
+      :class="heroBanner.HeroBackground.data ? '' : 'bg-primary-100'"
     >
       <div class="w-full md:w-1/2 xl:w-1/3 md:px-6">
         <ImageMolecule
@@ -32,7 +32,7 @@
           <h1
             v-if="heroBanner.HeroTitle"
             class="font-bold text-white text-3xl xl:text-4xl leading-tight"
-            :class="heroBanner.HeroBackground.data ? '' : 'text-blue-900'"
+            :class="heroBanner.HeroBackground.data ? '' : 'text-black'"
           >
             {{ heroBanner.HeroTitle }}
           </h1>
@@ -40,7 +40,7 @@
             v-if="heroBanner.HeroSubText"
             :Text="heroBanner.HeroSubText"
             class="mt-8 text-white"
-            :class="heroBanner.HeroBackground.data ? '' : 'text-blue-900'"
+            :class="heroBanner.HeroBackground.data ? '' : 'text-black'"
           />
           <div class="inline-block mt-4">
             <ButtonMolecule

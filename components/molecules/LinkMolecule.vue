@@ -1,7 +1,7 @@
 <template>
   <a
     v-if="Link.Link.data !== null"
-    class="flex items-center justify-between no-underline text-gray-700 pb-8 border-b border-gray-300 transform transition-all duration-300 hover:translate-x-6"
+    class="flex items-center justify-between no-underline text-black pb-8 border-b border-gray-300 transform transition-all duration-300 hover:translate-x-6"
     :href="Link.Link.data.attributes.Slug"
     :target="Link.OpenInNewTab ? '_blank' : ''"
     :title="
@@ -14,13 +14,13 @@
     </span>
     <font-awesome-icon
       :icon="['fas', 'chevron-right']"
-      class="ml-20 text-2xl text-blue-500"
+      class="ml-20 text-2xl text-primary-500"
     />
   </a>
 
   <a
     v-else-if="Link.ExternalLink !== null"
-    class="flex items-center justify-between no-underline text-gray-700 pb-8 border-b border-gray-300 transform transition-all duration-300 hover:translate-x-6"
+    class="flex items-center justify-between no-underline text-black pb-8 border-b border-gray-300 transform transition-all duration-300 hover:translate-x-6"
     :href="'//' + Link.ExternalLink"
     :target="Link.OpenInNewTab ? '_blank' : ''"
   >
@@ -30,7 +30,7 @@
     </span>
     <font-awesome-icon
       :icon="['fas', 'chevron-right']"
-      class="ml-20 text-2xl text-blue-500"
+      class="ml-20 text-2xl text-primary-500"
     />
   </a>
 </template>

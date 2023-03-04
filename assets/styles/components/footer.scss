@@ -1,6 +1,6 @@
 .Footer {
   p {
-    @apply text-sm text-blue-900;
+    @apply text-sm text-black;
 
     strong {
       @apply font-semibold;
@@ -10,7 +10,7 @@
     @apply no-underline text-base leading-none;
 
     &:hover {
-      @apply text-green-500;
+      @apply text-secondary-500;
     }
   }
   h1,

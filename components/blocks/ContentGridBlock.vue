@@ -13,7 +13,7 @@
     "
   >
     <div
-      class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-8 md:grid-rows-3 bg-green-500"
+      class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-8 md:grid-rows-3 bg-secondary-500"
     >
       <div
         v-for="Block in Blocks"
@@ -69,7 +69,7 @@
           <div
             v-if="Block.Text"
             v-html="Block.Text"
-            class="text-white text-center w-full px-8 flex-grow-0 flex-shrink-0 bg-green-500 h-full flex flex-col justify-end pt-4 pb-2 bg-opacity-75"
+            class="text-white text-center w-full px-8 flex-grow-0 flex-shrink-0 bg-secondary-500 h-full flex flex-col justify-end pt-4 pb-2 bg-opacity-75"
             :class="Block.Type == 'TextBlock' ? 'hidden' : ''"
           ></div>
         </div>

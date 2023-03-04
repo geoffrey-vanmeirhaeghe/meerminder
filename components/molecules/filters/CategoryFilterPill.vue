@@ -1,9 +1,9 @@
 <template>
   <button
-    class="px-5 py-2 border border-blue-500 mr-2 rounded-full text-sm"
+    class="px-5 py-2 border border-primary-500 mr-2 rounded-full text-sm"
     @click="onClickButton()"
     :class="
-      ActiveCategory == Category.id ? 'bg-blue-500 text-white' : 'text-blue-500'
+      ActiveCategory == Category.id ? 'bg-primary-500 text-white' : 'text-primary-500'
     "
   >
     {{ Category.attributes.Title }}

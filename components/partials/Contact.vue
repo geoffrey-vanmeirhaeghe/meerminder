@@ -16,7 +16,7 @@
     </div>
     <div class="container flex justify-center" v-if="!confirmationMessage">
       <form id="contactform" class="w-full max-w-2xl">
-        <div class="bg-blue-100 p-6 lg:p-12 pb-12 w-full">
+        <div class="bg-primary-100 p-6 lg:p-12 pb-12 w-full">
           <div>
             <div class="w-full">
               <label for="Name" class="block">Naam</label>

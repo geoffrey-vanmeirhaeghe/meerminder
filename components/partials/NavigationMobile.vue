@@ -51,7 +51,7 @@
       "
     >
       <div
-        class="bg-blue-100 transition-all duration-300 ease-in h-full rounded-lg overflow-y-scroll"
+        class="bg-primary-100 transition-all duration-300 ease-in h-full rounded-lg overflow-y-scroll"
       >
         <nav class="relative h-full">
           <MainNavMolecule

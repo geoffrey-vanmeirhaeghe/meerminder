@@ -22,9 +22,9 @@
           />
           <div
             v-if="Testimonial.Author"
-            class="text-sm italic flex items-center justify-center mt-6 text-blue-800"
+            class="text-sm italic flex items-center justify-center mt-6 text-black"
           >
-            <hr class="w-4 border-blue-800 mr-2 border" />
+            <hr class="w-4 border-primary-500 mr-2 border" />
             <span>{{ Testimonial.Author }}</span>
           </div>
         </div>

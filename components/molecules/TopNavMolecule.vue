@@ -14,8 +14,8 @@
         class="no-underline uppercase"
         :class="
           MobileNav
-            ? 'text-blue-900 text-center block w-full'
-            : 'text-gray-700 hover:text-green-500'
+            ? 'text-black text-center block w-full'
+            : 'text-black hover:text-secondary-500'
         "
       >
         {{ Link.attributes.Title }}

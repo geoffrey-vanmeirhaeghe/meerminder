@@ -10,13 +10,13 @@
           v-for="category in Categories.data"
           :key="category.id"
           :href="'category/' + category.attributes.Slug"
-          class="text-xs px-2 py-1 rounded-full border border-blue-200 mr-2 mb-0 no-underline text-blue-400 inline-block"
+          class="text-xs px-2 py-1 rounded-full border border-primary-200 mr-2 mb-0 no-underline text-primary-400 inline-block"
         >
           {{ category.attributes.Title }}
         </div>
       </div>
       <p class="font-bold text-base">{{ Title }}</p>
-      <p class="text-sm text-blue-500 flex items-center">
+      <p class="text-sm text-primary-500 flex items-center">
         Ontdek de case
         <font-awesome-icon
           :icon="['fas', 'chevron-right']"

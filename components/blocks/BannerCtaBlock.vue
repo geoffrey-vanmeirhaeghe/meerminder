@@ -15,7 +15,7 @@
     ></div>
     <div
       class="container flex min-h-96 py-8 justify-center items-center flex-col container-with-image relative"
-      :class="Image ? '' : 'bg-blue-500'"
+      :class="Image ? '' : 'bg-primary-500'"
     >
       <HeadingMolecule
         v-if="Title"
