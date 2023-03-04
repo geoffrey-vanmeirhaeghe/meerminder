@@ -2,14 +2,14 @@
 
 .Primary {
   &Button {
-    @apply bg-primary-500 text-white rounded px-6 py-3 no-underline;
+    @apply bg-secondary-500 text-white rounded-full px-8 py-4 no-underline font-medium text-lg;
 
     &:hover {
       @apply bg-secondary-500 text-white;
     }
 
     &Outline {
-      @apply bg-transparent border border-primary-500 text-primary-500 rounded px-6 py-3 no-underline;
+      @apply bg-transparent border border-secondary-500 text-secondary-500 rounded px-8 py-4 no-underline font-medium text-lg;
 
       &.inverted-colors {
         @apply border-white text-white;
@@ -20,7 +20,7 @@
       }
 
       &Chevron {
-        @apply bg-transparent border border-primary-500 text-primary-500 rounded px-6 py-3 no-underline;
+        @apply bg-transparent border border-secondary-500 text-secondary-500 rounded px-8 py-4 no-underline font-medium text-lg;
 
         &.inverted-colors {
           @apply border-white text-white;
@@ -33,7 +33,7 @@
     }
 
     &Chevron {
-      @apply bg-primary-500 text-white rounded px-6 py-3 no-underline;
+      @apply bg-secondary-500 text-white rounded px-8 py-4 no-underline;
 
       &:hover {
         @apply bg-secondary-500 text-white;
@@ -44,10 +44,10 @@
 
 .Secondary {
   &Button {
-    @apply bg-secondary-500 transform skew-x-0 rotate-0 px-6 py-6 rounded text-white no-underline;
+    @apply bg-secondary-500 transform skew-x-0 rotate-0 px-8 py-4 rounded-full text-white no-underline font-medium text-lg;
 
     &Chevron {
-      @apply bg-secondary-500 transform skew-x-0 rotate-0 px-6 py-6 rounded text-white no-underline;
+      @apply bg-secondary-500 transform skew-x-0 rotate-0 px-8 py-4 rounded text-white no-underline font-medium text-lg;
 
       &:hover {
         @apply bg-secondary-500 text-white skew-x-6 rotate-2;

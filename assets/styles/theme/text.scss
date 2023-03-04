@@ -16,10 +16,14 @@ p {
 }
 
 h1 {
-  @apply text-4xl leading-tight mb-4;
+  @apply text-3xl mb-4;
 
   @screen md {
-    @apply text-5xl;
+    @apply text-4xl leading-normal;
+  }
+  
+  @screen xl {
+    @apply text-6xl leading-normal;
   }
 }
 

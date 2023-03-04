@@ -3,28 +3,20 @@
     class="bg-center bg-cover relative"
   >
     <div
-      class="md:flex flex-row-reverse min-h-144 py-8 px-4 lg:px-8 justify-center items-center container-with-image relative bg-primary-500"
+      class="flex flex-row-reverse min-h-108 py-8 px-4 lg:px-8 justify-center items-center container-with-image relative bg-primary-500"
     >
-      <div class="w-full md:w-1/2 xl:w-2/3 py-8">
-        <div class="max-w-2xl mx-auto">
-          <h1
-            v-if="heroBanner.HeroTitle"
-            class="font-bold text-white text-3xl xl:text-4xl leading-tight"
-          >
-            {{ heroBanner.HeroTitle }}
-          </h1>
-          <TextMolecule
-            v-if="heroBanner.HeroSubText"
-            :Text="heroBanner.HeroSubText"
-            class="mt-8 text-white"
+      <div class="w-full mx-auto max-w-3xl xl:max-w-7xl mb-16">
+        <TextMolecule
+          v-if="heroBanner.HeroSubText"
+          :Text="heroBanner.HeroSubText"
+          class="mt-8 text-white max-w-full md:text-center leading-loose"
+        />
+        <div class="flex mt-8 md:mx-auto text-center md:justify-center ">
+          <ButtonMolecule
+            v-if="heroBanner.HeroCtaButton"
+            :Button="heroBanner.HeroCtaButton"
+            class="mt-6 md:mx-auto"
           />
-          <div class="inline-block mt-4">
-            <ButtonMolecule
-              v-if="heroBanner.HeroCtaButton"
-              :Button="heroBanner.HeroCtaButton"
-              class="mt-3 inverted-colors"
-            />
-          </div>
         </div>
       </div>
     </div>

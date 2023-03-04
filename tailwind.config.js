@@ -17,6 +17,7 @@ module.exports = {
         black: "#182750",
       },
       spacing: {
+        108: "27rem",
         144: "36rem",
         192: "48rem",
       },

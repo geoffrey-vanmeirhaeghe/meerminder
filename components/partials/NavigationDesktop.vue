@@ -9,20 +9,13 @@
           v-if="navigation.MainNav || navigation.TopnavPages"
           class="flex flex-col items-end py-4 mr-8 justify-center"
         >
-          <TopNavMolecule
-            v-if="navigation.TopnavPages"
-            :Links="
-              navigation.TopnavPages.data ? navigation.TopnavPages.data : ''
-            "
-            class="flex"
-          >
-          </TopNavMolecule>
           <MainNavMolecule
             v-if="navigation.MainNav"
             :Links="navigation.MainNav.data ? navigation.MainNav.data : ''"
             :Button="
               navigation.MainNavCtaButton ? navigation.MainNavCtaButton : ''
             "
+            :HeroActive="HeroActive ? true : false"
           >
           </MainNavMolecule>
         </div>

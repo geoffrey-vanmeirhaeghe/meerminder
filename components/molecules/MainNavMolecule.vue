@@ -19,10 +19,14 @@
       <a
         :href="'/' + Link.attributes.Slug"
         class="no-underline"
-        :class="
-          MobileNav
-            ? 'font-semibold text-black text-3xl block justify-between items-center w-full'
-            : 'text-black uppercase text-sm tracking-wider'
+        :class=" [
+            MobileNav
+              ? 'font-semibold text-3xl block justify-between items-center w-full'
+              : 'uppercase text-sm tracking-wider',
+            HeroActive
+            ? 'text-white'
+            : 'text-black',
+          ]
         "
       >
         {{ Link.attributes.Title }}
@@ -37,7 +41,7 @@
 import ButtonMolecule from "~/components/molecules/ButtonMolecule.vue";
 
 export default {
-  props: ["Links", "Button", "MobileNav"],
+  props: ["Links", "Button", "MobileNav", "HeroActive"],
 
   components: {
     ButtonMolecule,

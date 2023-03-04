@@ -3,20 +3,13 @@
     <div class="min-h-24 flex items-center" :class="dropdownIsActive ? '' : ''">
       <div
         v-if="navigation"
-        class="flex items-center justify-between z-70 bg-white w-full"
+        class="flex items-center justify-between z-70 w-full"
         :class="dropdownIsActive ? 'fixed' : 'relative'"
       >
         <a href="/" class="pl-4 w-32 block mb-1">
           <Logo :HeroActive="HeroActive ? true : false" />
         </a>
         <div class="flex items-center py-4">
-          <div class="mr-1">
-            <ButtonMolecule
-              v-if="navigation.MainNavCtaButton"
-              :Button="navigation.MainNavCtaButton"
-              class="text-sm"
-            />
-          </div>
           <div
             class="px-5 cursor-pointer block w-16"
             v-on:click="dropdownIsActive = !dropdownIsActive"
@@ -24,19 +17,30 @@
           >
             <div class="block w-full">
               <div
-                class="block w-full rounded-full h-px p-px bg-black transform transition duration-300 ease-in-out mb-2 origin-top-left"
-                :class="dropdownIsActive ? 'rotate-45 translate-x-1' : ''"
-              ></div>
-              <div
-                class="block w-full rounded-full h-px p-px bg-black transition-all duration-300 ease-in-out"
-                :class="dropdownIsActive ? 'opacity-0' : 'opacity-100'"
-              ></div>
-              <div
-                class="block w-full rounded-full h-px p-px bg-black transform transition duration-300 ease-in-out mt-2 origin-bottom-left"
+                class="block w-full rounded-full h-px p-px transform transition duration-300 ease-in-out mb-2 origin-top-left"
                 :class="
-                  dropdownIsActive
-                    ? '-rotate-45 translate-x-1 -translate-y-1'
-                    : ''
+                  [ 
+                    dropdownIsActive ? 'rotate-45 translate-x-1' : '',
+                    HeroActive ? 'bg-white' : 'bg-black',
+                  ]
+                "
+              ></div>
+              <div
+                class="block w-full rounded-full h-px p-px transition-all duration-300 ease-in-out"
+                :class="
+                  [ 
+                    dropdownIsActive ? 'opacity-0' : 'opacity-100',
+                    HeroActive ? 'bg-white' : 'bg-black',
+                  ]
+                "
+              ></div>
+              <div
+                class="block w-full rounded-full h-px p-px transform transition duration-300 ease-in-out mt-2 origin-bottom-left"
+                :class="
+                  [ 
+                    dropdownIsActive ? '-rotate-45 translate-x-1 -translate-y-1' : '',
+                    HeroActive ? 'bg-white' : 'bg-black',
+                  ]
                 "
               ></div>
             </div>
@@ -60,28 +64,6 @@
             :MobileNav="true"
           >
           </MainNavMolecule>
-          <!-- Topnav menu -->
-          <TopNavMolecule
-            v-if="navigation.TopnavPages"
-            :Links="
-              navigation.TopnavPages.data ? navigation.TopnavPages.data : ''
-            "
-            :MobileNav="true"
-            class="px-3 py-1 mx-3 mt-1 border-t border-white"
-          >
-          </TopNavMolecule>
-          <!-- Dropdown menu -->
-          <TopNavMolecule
-            v-if="navigation.DropdownMenu"
-            :Links="
-              navigation.DropdownMenu.MainPages.data
-                ? navigation.DropdownMenu.MainPages.data
-                : ''
-            "
-            :MobileNav="true"
-            class="px-3 py-1 mx-3 mt-1 border-t border-white"
-          >
-          </TopNavMolecule>
         </nav>
       </div>
     </div>
@@ -111,6 +93,8 @@ import TopNavMolecule from "~/components/molecules/TopNavMolecule.vue";
 import Logo from "~/components/partials/Logo.vue";
 
 export default {
+  props: ["HeroActive"],
+
   apollo: {
     navigation: {
       prefetch: true,
