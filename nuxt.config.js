@@ -34,6 +34,13 @@ export default {
         href: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css",
       },
     ],
+    link: [
+      {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap",
+      },
+    ],
   },
 
   // router: {
