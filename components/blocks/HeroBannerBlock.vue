@@ -5,7 +5,8 @@
     <div
       class="flex flex-row-reverse min-h-108 py-8 px-4 lg:px-8 justify-center items-center container-with-image relative bg-primary-500"
     >
-      <div class="w-full mx-auto max-w-3xl xl:max-w-7xl mb-16">
+      <img src="~/assets/img/header-mermaid.svg" class="absolute top-0 right-0 h-full object-cover" />
+      <div class="w-full mx-auto max-w-3xl xl:max-w-7xl mb-16 mt-32 py-8 z-10">
         <TextMolecule
           v-if="heroBanner.HeroSubText"
           :Text="heroBanner.HeroSubText"
