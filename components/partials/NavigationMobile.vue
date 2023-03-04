@@ -6,7 +6,7 @@
         class="flex items-center justify-between z-70 bg-white w-full"
         :class="dropdownIsActive ? 'fixed' : 'relative'"
       >
-        <a href="/" v-if="navigation.Logo" class="pl-4 w-32 block mb-1">
+        <a href="/" class="pl-4 w-32 block mb-1">
           <Logo :HeroActive="HeroActive ? true : false" />
         </a>
         <div class="flex items-center py-4">

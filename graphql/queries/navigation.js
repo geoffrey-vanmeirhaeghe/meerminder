@@ -5,18 +5,6 @@ export const Navigation = gql`
     navigation {
       data {
         attributes {
-          Logo {
-            data {
-              attributes {
-                name
-                alternativeText
-                caption
-                width
-                height
-                url
-              }
-            }
-          }
           MainNav {
             data {
               attributes {

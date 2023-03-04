@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav v-if="navigation" class="flex items-top justify-between">
-      <a href="/" v-if="navigation.Logo" class="pl-4 py-8 w-40 block">
+      <a href="/" class="pl-4 py-8 w-40 block">
         <Logo :HeroActive="HeroActive ? true : false" />
       </a>
       <div class="flex items-stretch">
