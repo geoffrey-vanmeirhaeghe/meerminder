@@ -13,42 +13,6 @@ export const Navigation = gql`
               }
             }
           }
-          DropdownMenu {
-            MainPages {
-              data {
-                attributes {
-                  Title
-                  Slug
-                }
-              }
-            }
-            Logo {
-              data {
-                attributes {
-                  name
-                  alternativeText
-                  caption
-                  width
-                  height
-                  url
-                }
-              }
-            }
-            DropdownCTA {
-              ButtonText
-              page {
-                data {
-                  attributes {
-                    Title
-                    Slug
-                  }
-                }
-              }
-              OpenInNewTab
-              Style
-              ExternalLink
-            }
-          }
           HeaderHero {
             HeroTitle
             HeroSubText

@@ -56,17 +56,6 @@ export const Footer = gql`
             Style
             ExternalLink
           }
-          FooterPartners {
-            data {
-              attributes {
-                name
-                alternativeText
-                width
-                height
-                url
-              }
-            }
-          }
         }
       }
     }

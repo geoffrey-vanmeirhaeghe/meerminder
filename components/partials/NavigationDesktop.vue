@@ -19,22 +19,6 @@
           >
           </MainNavMolecule>
         </div>
-        <!-- <DropdownMenuMolecule
-          v-if="navigation.DropdownMenu"
-          :Links="
-            navigation.DropdownMenu.MainPages.data
-              ? navigation.DropdownMenu.MainPages.data
-              : ''
-          "
-          :Button="
-            navigation.DropdownMenu.DropdownCTA
-              ? navigation.DropdownMenu.DropdownCTA
-              : ''
-          "
-          :Logo="
-            navigation.DropdownMenu.Logo ? navigation.DropdownMenu.Logo : ''
-          "
-        /> -->
       </div>
     </nav>
   </div>
@@ -48,7 +32,6 @@ import { Navigation } from "~/graphql/queries/navigation";
 import ImageMolecule from "~/components/molecules/ImageMolecule.vue";
 import MainNavMolecule from "~/components/molecules/MainNavMolecule.vue";
 import TopNavMolecule from "~/components/molecules/TopNavMolecule.vue";
-import DropdownMenuMolecule from "~/components/molecules/DropdownMenuMolecule.vue";
 import Logo from "~/components/partials/Logo.vue";
 
 export default {
@@ -58,7 +41,6 @@ export default {
     ImageMolecule,
     MainNavMolecule,
     TopNavMolecule,
-    DropdownMenuMolecule,
     Logo
   },
 

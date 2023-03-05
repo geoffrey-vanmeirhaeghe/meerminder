@@ -19,7 +19,11 @@
         </div>
       </div>
     </div>
-    <SwirlBanner :AnimationActive="true" class="transform -translate-y-3" />
+    <div class="relative">
+      <MascotTail class="absolute w-144 lg:w-full top-0 left-0 transform -translate-x-1/2 -translate-y-36 lg:translate-y-10" />
+      <SwirlBanner :AnimationActive="true" class="transform -translate-y-3" />
+      <SwirlBanner :AnimationActive="true" class="transform -translate-y-3 hidden lg:block" />
+    </div>
   </div>
 </template>
 
@@ -32,6 +36,7 @@ import HeadingMolecule from "~/components/molecules/HeadingMolecule.vue";
 import TextMolecule from "~/components/molecules/TextMolecule.vue";
 import ButtonMolecule from "~/components/molecules/ButtonMolecule.vue";
 import SwirlBanner from "~/components/partials/SwirlBanner.vue";
+import MascotTail from "~/components/partials/MascotTail.vue";
 
 export default {
   components: {
@@ -39,6 +44,7 @@ export default {
     TextMolecule,
     ButtonMolecule,
     SwirlBanner,
+    MascotTail,
   },
 
   apollo: {

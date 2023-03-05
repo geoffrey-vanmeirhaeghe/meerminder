@@ -1,19 +1,5 @@
 <template>
   <footer id="Footer" class="Footer mt-12 lg:mt-24">
-    <div class="bg-gray-100" v-if="footer.FooterPartners.data != ''">
-      <div class="container flex flex-wrap justify-around py-6">
-        <img
-          v-for="FooterPartner in footer.FooterPartners.data"
-          :key="FooterPartner.id"
-          :src="strapiBaseUri + FooterPartner.attributes.url"
-          :alt="FooterPartner.attributes.alternativeText"
-          :width="FooterPartner.attributes.width"
-          :height="FooterPartner.attributes.height"
-          loading="lazy"
-          class="h-16 w-auto my-3 mx-4 filter grayscale opacity-75"
-        />
-      </div>
-    </div>
     <div class="bg-primary-100 sm:py-6">
       <div class="container">
         <div class="flex flex-wrap items-start">
