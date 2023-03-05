@@ -25,7 +25,8 @@
               : 'uppercase text-sm tracking-wider',
             HeroActive
             ? 'text-white'
-            : 'text-black',
+            : 'text-white lg:text-black',
+            setActiveState == '/' + Link.attributes.Slug ? 'active' : '',
           ]
         "
       >
@@ -51,6 +52,12 @@ export default {
     return {
       strapiBaseUri: process.env.strapiBaseUri,
     };
+  },
+
+  computed: {
+    setActiveState() {
+      return this.$route.path;
+    },
   },
 };
 </script>

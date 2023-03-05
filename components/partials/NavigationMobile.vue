@@ -4,7 +4,7 @@
       <div
         v-if="navigation"
         class="flex items-center justify-between z-70 w-full"
-        :class="dropdownIsActive ? 'fixed' : 'relative'"
+        :class="dropdownIsActive ? 'fixed bg-primary-500' : 'relative'"
       >
         <a href="/" class="pl-4 w-32 block mb-1">
           <Logo :HeroActive="HeroActive ? true : false" />
@@ -49,13 +49,13 @@
       </div>
     </div>
     <div
-      class="fixed top-0 right-0 z-60 overflow-hidden transition-all duration-500 ease-in-out pt-20 w-screen bg-white"
+      class="fixed top-0 right-0 z-60 overflow-hidden transition-all duration-500 ease-in-out pt-24 w-screen bg-primary-500"
       :class="
         dropdownIsActive == true ? 'opacity-100 h-screen p-2' : 'h-0 opacity-0'
       "
     >
       <div
-        class="bg-primary-100 transition-all duration-300 ease-in h-full rounded-lg overflow-y-scroll"
+        class="transition-all duration-300 ease-in h-full rounded-lg overflow-y-scroll"
       >
         <nav class="relative h-full">
           <MainNavMolecule

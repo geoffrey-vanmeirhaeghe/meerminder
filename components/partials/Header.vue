@@ -1,5 +1,5 @@
 <template>
-  <header id="Header" class="Header z-50">
+  <header id="Header" class="Header z-50" :class="HeroActive ? 'HeroActive' : ''">
     <NavigationMobile 
       class="lg:hidden" 
       :class="
