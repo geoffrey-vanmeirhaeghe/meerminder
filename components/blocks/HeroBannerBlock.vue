@@ -1,9 +1,7 @@
 <template>
-  <div
-    class="bg-center bg-cover relative"
-  >
+  <div>
     <div
-      class="flex flex-row-reverse min-h-108 py-8 px-4 lg:px-8 justify-center items-center container-with-image relative bg-primary-500"
+      class="relative flex flex-row-reverse min-h-108 py-8 px-4 lg:px-8 justify-center items-center container-with-image bg-primary-500"
     >
       <img src="~/assets/img/header-mermaid.svg" class="absolute top-0 right-0 h-full object-cover" />
       <div class="w-full mx-auto max-w-3xl xl:max-w-7xl mb-16 mt-32 py-8 z-10">
@@ -21,6 +19,7 @@
         </div>
       </div>
     </div>
+    <SwirlBanner :AnimationActive="true" class="transform -translate-y-3" />
   </div>
 </template>
 
@@ -32,12 +31,14 @@ import { Navigation } from "~/graphql/queries/navigation";
 import HeadingMolecule from "~/components/molecules/HeadingMolecule.vue";
 import TextMolecule from "~/components/molecules/TextMolecule.vue";
 import ButtonMolecule from "~/components/molecules/ButtonMolecule.vue";
+import SwirlBanner from "~/components/partials/SwirlBanner.vue";
 
 export default {
   components: {
     HeadingMolecule,
     TextMolecule,
     ButtonMolecule,
+    SwirlBanner,
   },
 
   apollo: {

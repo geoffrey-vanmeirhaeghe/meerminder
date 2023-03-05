@@ -4,7 +4,6 @@
       :HeroActive="
         modulePage.data.attributes.Home.data.attributes.Slug ? true : ''
       "
-      class="bg-primary-500"
     />
     <ModulePageBlocks
       :ModulePage="

@@ -30,5 +30,8 @@
             background: url(~/assets/img/nav-swirl-white.svg) repeat-x;
             background-position: -2px 0;
         }
+        .swirl-banner {
+            z-index: -10;
+        }
     }
 }
