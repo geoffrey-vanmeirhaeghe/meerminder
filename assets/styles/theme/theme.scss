@@ -2,41 +2,17 @@
 
 .Primary {
   &Button {
-    @apply bg-secondary-500 text-white rounded-full px-8 py-4 no-underline font-medium text-lg;
+    @apply transition-all duration-300 bg-secondary-500 border-2 border-secondary-500 text-white rounded-full px-8 py-4 no-underline font-medium text-lg;
 
     &:hover {
-      @apply bg-secondary-500 text-white;
+      @apply border-secondary-500 bg-transparent text-secondary-500;
     }
 
-    &Outline {
-      @apply bg-transparent border border-secondary-500 text-secondary-500 rounded px-8 py-4 no-underline font-medium text-lg;
-
-      &.inverted-colors {
-        @apply border-white text-white;
-      }
+    &Small {
+      @apply transition-all duration-300 bg-secondary-500 border border-secondary-500 text-white rounded-full px-4 py-3 no-underline font-medium text-sm;
 
       &:hover {
-        @apply bg-secondary-500 text-white border-secondary-500;
-      }
-
-      &Chevron {
-        @apply bg-transparent border border-secondary-500 text-secondary-500 rounded px-8 py-4 no-underline font-medium text-lg;
-
-        &.inverted-colors {
-          @apply border-white text-white;
-        }
-
-        &:hover {
-          @apply bg-secondary-500 text-white border-secondary-500;
-        }
-      }
-    }
-
-    &Chevron {
-      @apply bg-secondary-500 text-white rounded px-8 py-4 no-underline;
-
-      &:hover {
-        @apply bg-secondary-500 text-white;
+        @apply border-secondary-500 bg-transparent text-secondary-500;
       }
     }
   }
@@ -44,18 +20,36 @@
 
 .Secondary {
   &Button {
-    @apply bg-secondary-500 transform skew-x-0 rotate-0 px-8 py-4 rounded-full text-white no-underline font-medium text-lg;
-
-    &Chevron {
-      @apply bg-secondary-500 transform skew-x-0 rotate-0 px-8 py-4 rounded text-white no-underline font-medium text-lg;
-
-      &:hover {
-        @apply bg-secondary-500 text-white skew-x-6 rotate-2;
-      }
-    }
+    @apply transition-all duration-300 inline-block border-b border-primary-300 text-primary-500 pb-2;
 
     &:hover {
-      @apply bg-secondary-500 text-white skew-x-6 rotate-2;
+      @apply border-primary-500;
+    }
+    
+    &Big {
+      @apply transition-all duration-300 inline-block border-b border-primary-300 text-primary-500 pb-2 text-3xl;
+
+      &:hover {
+        @apply border-primary-500;
+      }
+    }
+  }
+}
+
+.PrimaryButton, .PrimaryButtonSmall {
+  &.inverted-colors {
+    &:hover {
+      @apply text-white border-white;
+    }
+  }
+}
+
+.SecondaryButton, .SecondaryButtonBig {
+  &.inverted-colors {
+    @apply text-primary-300;
+
+    &:hover {
+      @apply text-white border-secondary-500;
     }
   }
 }

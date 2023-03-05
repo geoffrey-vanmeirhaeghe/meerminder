@@ -14,7 +14,6 @@
       <div class="swirl-image"></div>
       <div class="swirl-image"></div>
       <div class="swirl-image"></div>
-      <div class="swirl-image"></div>
     </div>
 </template>
 <script>

@@ -14,7 +14,7 @@
           <ButtonMolecule
             v-if="heroBanner.HeroCtaButton"
             :Button="heroBanner.HeroCtaButton"
-            class="mt-6 md:mx-auto"
+            class="mt-6 md:mx-auto inverted-colors"
           />
         </div>
       </div>

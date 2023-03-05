@@ -1,119 +1,66 @@
 <template>
   <footer id="Footer" class="Footer mt-12 lg:mt-24">
-    <div class="bg-primary-100 sm:py-6">
-      <div class="container">
-        <div class="flex flex-wrap items-start">
-          <div
-            class="py-8 w-full sm:w-1/3 xl:w-1/4 sm:pr-6 border-b border-primary-200 sm:border-b-0"
-          >
-            <a
-              href="/"
-              v-if="footer.FooterLogo.data.attributes"
-              class="min-w-max block mb-1 mr-6"
-            >
-              <ImageMolecule :Image="footer.FooterLogo" />
-            </a>
-            <div
-              v-if="footer.FooterContactInfo"
-              v-html="footer.FooterContactInfo"
-              class="mt-6"
-            ></div>
-            <div class="inline-block mt-6">
-              <ButtonMolecule
-                v-if="footer.FooterCtaButton"
-                :Button="footer.FooterCtaButton"
-                class="text-sm"
-              />
-            </div>
+    <div class="bg-primary-500 py-10 md:pt-24 flex flex-col md:flex-row min-h-screen relative overflow-hidden">
+      <div>
+        <MascotTail class="absolute opacity-25 lg:opacity-100 w-144 lg:w-2/3 bottom-0 right-0 transform -scale-x-100 translate-x-1/2 lg:translate-x-1/3 md:translate-y-48 xl:translate-y-36" :White="true" />
+      </div>
+      <div class="container z-10">
+        <div class="md:w-2/3 lg:w-1/2 flex flex-col justify-between h-full">
+          <div>
+            <p v-if="footer.FooterTitle" class="uppercase font-black text-white text-6xl">{{ footer.FooterTitle }}</p>
+            <a href="mailto:info@meerminder.be" class="SecondaryButtonBig inverted-colors mt-6 md:mt-16">info@meerminder.be</a>
           </div>
-          <div
-            class="w-full sm:w-2/3 xl:w-3/4 sm:pl-10 md:pl-20 my-6 sm:border-l border-primary-200"
-          >
-            <div>
-              <h4
-                v-if="footer.FooterTitle"
-                class="font-light text-black mb-0 max-w-md lg:max-w-xl xl:max-w-2xl text-2xl lg:text-3xl xl:text-4xl"
-              >
-                {{ footer.FooterTitle }}
-              </h4>
-            </div>
-            <div
-              v-if="footer.FooterMainNav.data || footer.FooterSubNav.data"
-              class="my-6 mt-12 flex flex-wrap"
-            >
+          <div class="mt-10 md:mt-32 h-full flex flex-col md:flex-row justify-between">
+            <div class="flex flex-col justify-between">
               <div
-                v-if="footer.FooterMainNav.data != ''"
-                class="w-1/2 lg:w-1/3 sm:max-w-56 pr-4"
+                v-if="footer.FooterContactInfo"
+                v-html="footer.FooterContactInfo"
+                class="footer-wysiwyg"
+              ></div>
+              <button
+                class="PrimaryButtonSmall inverted-colors mt-6"
+                v-on:click="$cookies.modal = true"
               >
-                <p><strong>Main footer nav</strong></p>
-                <ul class="no-default-icon inline-flex flex-col">
+                Cookies aanpassen
+              </button>
+            </div>
+            <div class="mt-6 md:mt-0" v-if="footer.FooterMainNav.data != ''">
+              <ul class="no-default-icon inline-flex flex-col">
                   <li
                     v-for="Link in footer.FooterMainNav.data"
                     :key="Link.id"
                     class="inline-block pl-0 my-2 leading-tight"
                   >
-                    <a :href="Link.attributes.Slug">
+                    <a :href="Link.attributes.Slug" class="SecondaryButton inverted-colors">
                       {{ Link.attributes.Title }}
                     </a>
                   </li>
                 </ul>
-              </div>
-              <div
-                v-if="footer.FooterSubNav.data != ''"
-                class="w-1/2 lg:w-1/3 sm:max-w-56 lg:pr-4"
-              >
-                <p><strong>Main footer nav</strong></p>
-                <ul class="no-default-icon inline-flex flex-col">
-                  <li
-                    v-for="Link in footer.FooterSubNav.data"
-                    :key="Link.id"
-                    class="inline-block pl-0 my-2 leading-tight"
-                  >
-                    <a :href="Link.attributes.Slug">
-                      {{ Link.attributes.Title }}
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            </div>
+            <div class="mt-6 md:mt-0">
+              <ul class="no-default-icon inline-flex flex-col">
+                <li class="inline-block pl-0 my-2 leading-tight"><a href="https://www.facebook.com/meerminderdesign" target="_blank" class="SecondaryButton inverted-colors">Facebook</a></li>
+                <li class="inline-block pl-0 my-2 leading-tight"><a href="https://be.linkedin.com/company/meerminder" target="_blank" class="SecondaryButton inverted-colors">Linkedin</a></li>
+                <li class="inline-block pl-0 my-2 leading-tight"><a href="https://www.instagram.com/meerminderdesign/" target="_blank" class="SecondaryButton inverted-colors">Instagram</a></li>
+              </ul>
             </div>
           </div>
         </div>
-        <div
-          class="sm:flex flex-wrap justify-between items-center py-3 lg:mt-5"
-        >
-          <ul
-            class="no-default-icon sm:flex flex-wrap"
-            v-if="footer.FooterLegalNav.data != ''"
-          >
-            <li
-              v-for="Link in footer.FooterLegalNav.data"
-              :key="Link.id"
-              class="sm:inline-block pl-0 my-2 sm:my-0 leading-tight mr-10"
-            >
-              <a :href="Link.attributes.Slug" class="text-primary-400">
-                {{ Link.attributes.Title }}
-              </a>
-            </li>
-          </ul>
-          <div class="flex items-center">
-            <button
-              class="mr-5 whitespace-nowrap text-white bg-primary-300 px-2 py-2 rounded text-xs hover:bg-primary-500 transition duration-300"
-              v-on:click="$cookies.modal = true"
-            >
-              Cookies aanpassen
-            </button>
-            <p class="mb-0 whitespace-nowrap py-3 sm:py-1">
-              <span>Website door: </span>
-              <a
-                href="https://www.meerminder.be"
-                target="_blank"
-                class="no-underline py-1 ml-1 border-b border-primary-500 text-black hover:text-secondary-500 hover:border-secondary-500"
-                >Meerminder</a
-              >
-            </p>
-          </div>
-        </div>
       </div>
+      <!-- <ul
+        class="no-default-icon sm:flex flex-wrap"
+        v-if="footer.FooterLegalNav.data != ''"
+      >
+        <li
+          v-for="Link in footer.FooterLegalNav.data"
+          :key="Link.id"
+          class="sm:inline-block pl-0 my-2 sm:my-0 leading-tight mr-10"
+        >
+          <a :href="Link.attributes.Slug" class="text-primary-400">
+            {{ Link.attributes.Title }}
+          </a>
+        </li>
+      </ul> -->
     </div>
   </footer>
 </template>
@@ -126,12 +73,16 @@ import { Footer } from "~/graphql/queries/footer";
 import HeadingMolecule from "~/components/molecules/HeadingMolecule.vue";
 import ImageMolecule from "~/components/molecules/ImageMolecule.vue";
 import ButtonMolecule from "~/components/molecules/ButtonMolecule.vue";
+import Logo from "~/components/partials/Logo.vue";
+import MascotTail from "~/components/partials/MascotTail.vue";
 
 export default {
   components: {
     ImageMolecule,
     HeadingMolecule,
     ButtonMolecule,
+    Logo,
+    MascotTail,
   },
 
   apollo: {

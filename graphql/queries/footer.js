@@ -7,26 +7,7 @@ export const Footer = gql`
         attributes {
           FooterTitle
           FooterContactInfo
-          FooterLogo {
-            data {
-              attributes {
-                name
-                alternativeText
-                width
-                height
-                url
-              }
-            }
-          }
           FooterMainNav {
-            data {
-              attributes {
-                Title
-                Slug
-              }
-            }
-          }
-          FooterSubNav {
             data {
               attributes {
                 Title
@@ -41,20 +22,6 @@ export const Footer = gql`
                 Slug
               }
             }
-          }
-          FooterCtaButton {
-            ButtonText
-            page {
-              data {
-                attributes {
-                  Title
-                  Slug
-                }
-              }
-            }
-            OpenInNewTab
-            Style
-            ExternalLink
           }
         }
       }

@@ -8,16 +8,7 @@
     :title="
       Button.page.data.attributes.Title ? Button.page.data.attributes.Title : ''
     "
-    >{{ Button.ButtonText
-    }}<font-awesome-icon
-      v-if="
-        Button.Style == 'PrimaryButtonChevron' ||
-        Button.Style == 'PrimaryButtonOutlineChevron' ||
-        Button.Style == 'SecondaryButtonChevron'
-      "
-      :icon="['fas', 'chevron-right']"
-      class="ml-3 text-sm"
-  /></a>
+    >{{ Button.ButtonText }}</a>
 
   <a
     v-else-if="Button.ExternalLink !== null"
@@ -25,16 +16,7 @@
     :class="Button.Style"
     :href="'//' + Button.ExternalLink"
     :target="Button.OpenInNewTab ? '_blank' : ''"
-    >{{ Button.ButtonText
-    }}<font-awesome-icon
-      v-if="
-        Button.Style == 'PrimaryButtonChevron' ||
-        Button.Style == 'PrimaryButtonOutlineChevron' ||
-        Button.Style == 'SecondaryButtonChevron'
-      "
-      :icon="['fas', 'chevron-right']"
-      class="ml-3 text-sm"
-  /></a>
+    >{{ Button.ButtonText }}</a>
 </template>
 
 <script>

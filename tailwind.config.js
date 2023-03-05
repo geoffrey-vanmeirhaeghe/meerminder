@@ -40,6 +40,9 @@ module.exports = {
         90: "90",
         100: "100",
       },
+      scale: {
+        '-100': '-100%',
+      }
     },
     variants: {
       backgroundColor: ["hover", "group-hover"],

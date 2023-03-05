@@ -1,6 +1,7 @@
 .Footer {
-  p {
-    @apply text-sm text-black;
+  @apply text-white;
+  p, a {
+    @apply no-underline;
 
     strong {
       @apply font-semibold;
@@ -19,5 +20,11 @@
   h4,
   h5 {
     @apply leading-normal;
+  }
+
+  .footer-wysiwyg {
+    p, a {
+      @apply text-primary-300;
+    }
   }
 }
