@@ -222,6 +222,7 @@ export const CaseQuery = gql`
                 ExternalLink
                 OpenInNewTab
               }
+              SliderText: Text { Text }
               SettingsSlider: Settings {
                 Width
                 Spacing

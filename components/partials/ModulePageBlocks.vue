@@ -117,6 +117,8 @@
         <!-- Slider Block -->
         <div v-if="Block.__typename == 'ComponentBlocksSlider'">
           <SliderBlock
+            :Text="Block.SliderText.Text ? Block.SliderText.Text : ''"
+            :Button="Block.Button ? Block.Button : ''"
             :Slides="Block.SliderSlide ? Block.SliderSlide : ''"
             :Settings="Block.SettingsSlider ? Block.SettingsSlider : ''"
           />

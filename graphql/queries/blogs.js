@@ -219,6 +219,7 @@ export const BlogQuery = gql`
                 ExternalLink
                 OpenInNewTab
               }
+              SliderText: Text { Text }
               SettingsSlider: Settings {
                 Width
                 Spacing

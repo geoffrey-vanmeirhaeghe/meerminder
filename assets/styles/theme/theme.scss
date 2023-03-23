@@ -25,6 +25,11 @@
     &:hover {
       @apply border-primary-500;
     }
+
+    &:before {
+      content: "MEER ";
+      @apply font-black;
+    }
     
     &Big {
       @apply transition-all duration-300 inline-block border-b border-primary-300 text-primary-500 pb-2 text-3xl;

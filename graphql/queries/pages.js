@@ -210,6 +210,21 @@ export const PageQuery = gql`
                 ExternalLink
                 OpenInNewTab
               }
+              SliderText: Text { Text }
+              Button {
+                ButtonText
+                page {
+                  data {
+                    attributes {
+                      Title
+                      Slug
+                    }
+                  }
+                }
+                OpenInNewTab
+                Style
+                ExternalLink
+              }
               SettingsSlider: Settings {
                 Width
                 Spacing

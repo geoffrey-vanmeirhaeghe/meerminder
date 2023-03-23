@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="relative">
+    <div class="relative xl:mb-32">
       <MascotTail class="absolute w-144 lg:w-full top-0 left-0 transform -translate-x-1/2 -translate-y-36 lg:translate-y-10" />
       <SwirlBanner :AnimationActive="true" class="transform -translate-y-3" />
       <SwirlBanner :AnimationActive="true" class="transform -translate-y-3 hidden lg:block" />
