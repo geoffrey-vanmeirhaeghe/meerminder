@@ -8,7 +8,7 @@
     :title="
       Button.page.data.attributes.Title ? Button.page.data.attributes.Title : ''
     "
-    >{{ Button.ButtonText }}</a>
+    ><span v-if="Button.Style == 'SecondaryButton'">{{ Prefix }} </span>{{ Button.ButtonText }}</a>
 
   <a
     v-else-if="Button.ExternalLink !== null"
@@ -16,11 +16,11 @@
     :class="Button.Style"
     :href="'//' + Button.ExternalLink"
     :target="Button.OpenInNewTab ? '_blank' : ''"
-    >{{ Button.ButtonText }}</a>
+    ><span v-if="Button.Style == 'SecondaryButton'">MEER </span>{{ Button.ButtonText }}</a>
 </template>
 
 <script>
 export default {
-  props: ["Button"],
+  props: ["Button", "Prefix"],
 };
 </script>

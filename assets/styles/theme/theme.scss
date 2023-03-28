@@ -26,9 +26,8 @@
       @apply border-primary-500;
     }
 
-    &:before {
-      content: "MEER ";
-      @apply font-black;
+    span {
+      @apply font-black uppercase;
     }
     
     &Big {
