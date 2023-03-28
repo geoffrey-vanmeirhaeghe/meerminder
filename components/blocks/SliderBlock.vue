@@ -15,29 +15,32 @@
         />
       </div>
       <div class="w-full xl:w-2/3 xl:pl-24">
-        <VueSlickCarousel v-bind="settings">
-          <div v-for="Slide in Slides" :key="Slide.id" class="inline-block">
-            <div class="w-full relative inline-block">
-              <ImageMolecule
-                v-if="Slide.Image.data"
-                :Image="Slide.Image"
-                class="object-cover w-full"
-              />
-              <div
-                class="flex flex-col lg:max-w-3xl lg:absolute bottom-4 xl:bottom-8 left-4 xl:left-24 right-4 xl:right-8 p-8 bg-primary-500 lg:bg-primary-500"
-              >
-                <h2
-                  v-if="Slide.Title"
-                  class="mt-3 text-3xl xl:text-5xl xl:leading-tight font-bold text-white"
-                >
-                  {{ Slide.Title }}
-                </h2>
-                <TextMolecule
-                  v-if="Slide.Text"
-                  :Text="Slide.Text"
-                  class="mt-6 inline-block text-white"
+        <div class="relative">
+          <button class="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-full" @click="showNext">
+            <img src="~/assets/img/anchor-arrow.svg"/>
+          </button>
+          <VueSlickCarousel v-bind="settings" class="bg-primary-500 p-3 pr-0 rounded-l-3xl ml-6 md:ml-0" ref="carousel">
+            <div v-for="Slide in Slides" :key="Slide.id" class="inline-block p-3">
+              <div class="w-full relative inline-block">
+                <ImageMolecule
+                  v-if="Slide.Image.data"
+                  :Image="Slide.Image"
+                  class="object-cover w-full rounded-xl"
                 />
-                <div class="mt-4">
+                <div
+                  class="mt-4 max-w-sm"
+                >
+                  <p
+                    v-if="Slide.Title"
+                    class="mt-3 text-xl font-extrabold text-white"
+                  >
+                    {{ Slide.Title }}
+                  </p>
+                  <TextMolecule
+                    v-if="Slide.Text"
+                    :Text="Slide.Text"
+                    class="mt-3 inline-block text-white wysiwyg-slide"
+                  />
                   <a
                     v-if="Slide.Link.data || Slide.ExternalLink"
                     :href="
@@ -53,17 +56,13 @@
                         : ''
                     "
                     :target="Slide.OpenInNewTab ? '_blank' : ''"
-                    class="PrimaryButtonOutlineChevron inverted-colors inline-block"
-                    >test
-                    <font-awesome-icon
-                      :icon="['fas', 'chevron-right']"
-                      class="ml-3 text-sm"
-                  /></a>
+                    class="SecondaryButton inverted-colors block no-underline"
+                    ><span>Meer </span>info</a>
                 </div>
               </div>
             </div>
-          </div>
-        </VueSlickCarousel>
+          </VueSlickCarousel>
+        </div>
       </div>
     </div>
   </div>
@@ -91,11 +90,21 @@ export default {
     return {
       strapiBaseUri: process.env.strapiBaseUri,
       settings: {
-        arrows: true,
+        arrows: false,
         dots: false,
         slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        centerPadding: "-100px",
+        centerMode: true,
       },
     };
   },
+
+  methods: {
+    showNext() {
+      this.$refs.carousel.next()
+    },
+  }
 };
 </script>

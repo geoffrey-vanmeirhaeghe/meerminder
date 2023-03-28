@@ -1,0 +1,7 @@
+.wysiwyg {
+    &-slide {
+        p {
+            @apply font-light opacity-75 text-sm leading-6;
+        }
+    }
+}
