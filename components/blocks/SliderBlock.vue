@@ -1,7 +1,7 @@
 <template>
   <div :class="Settings.Width + ' spacing-' + Settings.Spacing">
     <div class="w-full flex flex-wrap">
-      <div class="w-full xl:w-1/3 container-left mb-8 xl:mb-0">
+      <div class="w-full lg:w-1/3 container-left mb-8 lg:mb-0">
         <TextMolecule
           v-if="Text"
           :Text="Text"
@@ -14,18 +14,18 @@
           class="no-underline mt-4"
         />
       </div>
-      <div class="w-full xl:w-2/3 xl:pl-24">
+      <div class="w-full lg:w-2/3 lg:pl-24">
         <div class="relative">
-          <button class="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-full" @click="showNext">
+          <button class="absolute right-16 lg:right-auto lg:left-0 top-1/2 transform -translate-y-1/2 translate-x-full lg:-translate-x-full rotate-180 lg:rotate-0" @click="showNext">
             <img src="~/assets/img/anchor-arrow.svg"/>
           </button>
-          <VueSlickCarousel v-bind="settings" class="bg-primary-500 p-3 pr-0 rounded-l-3xl ml-6 md:ml-0" ref="carousel">
+          <VueSlickCarousel v-bind="settings" class="bg-primary-500 p-3 lg:pl-3 lg:pr-0 rounded-r-3xl lg:rounded-r-none lg:rounded-l-3xl mr-16 lg:mr-0" ref="carousel">
             <div v-for="Slide in Slides" :key="Slide.id" class="inline-block p-3">
               <div class="w-full relative inline-block">
                 <ImageMolecule
                   v-if="Slide.Image.data"
                   :Image="Slide.Image"
-                  class="object-cover w-full rounded-xl"
+                  class="object-cover w-full rounded-xl pointer-events-none"
                 />
                 <div
                   class="mt-4 max-w-sm"
@@ -97,6 +97,24 @@ export default {
         infinite: true,
         centerPadding: "-100px",
         centerMode: true,
+        rtl: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              centerPadding: "0",
+              centerMode: false,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              centerPadding: "0",
+              centerMode: false,
+            }
+          },
+        ]
       },
     };
   },
