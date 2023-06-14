@@ -9,6 +9,7 @@
   padding-right: 2rem;
 
   @screen md {
+    padding-right: 0;
     padding-left: calc((100vw - theme('container.screens.md'))/2);
   }
   @screen lg {
@@ -16,6 +17,22 @@
   }
   @screen xl {
     padding-left: calc((100vw - theme('container.screens.xl'))/2);
+  }
+}
+
+.container-right {
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @screen md {
+    padding-left: 0;
+    padding-right: calc((100vw - theme('container.screens.md'))/2);
+  }
+  @screen lg {
+    padding-right: calc((100vw - theme('container.screens.lg'))/2);
+  }
+  @screen xl {
+    padding-right: calc((100vw - theme('container.screens.xl'))/2);
   }
 }
 

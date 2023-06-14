@@ -4,7 +4,7 @@ body {
 }
 
 p {
-  @apply text-base mb-4 leading-loose;
+  @apply text-base mb-4 leading-loose max-w-md;
 
   & + p {
     @apply mb-0;
@@ -31,7 +31,7 @@ h2 {
   @apply text-3xl leading-tight mb-4 font-black uppercase;
 
   @screen md {
-    @apply text-4xl leading-tight;
+    @apply text-5xl leading-tight;
   }
 }
 

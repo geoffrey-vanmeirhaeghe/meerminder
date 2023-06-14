@@ -297,6 +297,16 @@ export const PageQuery = gql`
               }
             }
             ... on ComponentBlocksTextWithLinks {
+              TextWithLinksImage: Image {
+                data {
+                  attributes {
+                    url
+                    alternativeText
+                    width
+                    height
+                  }
+                }
+              }
               Title {
                 Title
                 Alignment

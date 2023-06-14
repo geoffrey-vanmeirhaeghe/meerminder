@@ -162,6 +162,7 @@
         <!-- Text With Links Block -->
         <div v-if="Block.__typename == 'ComponentBlocksTextWithLinks'">
           <TextWithLinks
+            :Image="Block.TextWithLinksImage ? Block.TextWithLinksImage : ''"
             :Title="Block.Title ? Block.Title : ''"
             :Text="
               Block.TextWithLinksText.Text ? Block.TextWithLinksText.Text : ''
