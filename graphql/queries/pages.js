@@ -233,16 +233,6 @@ export const PageQuery = gql`
             ... on ComponentBlocksTestimonials {
               TestimonialsTestimonial: Testimonial {
                 Author
-                Image {
-                  data {
-                    attributes {
-                      url
-                      alternativeText
-                      width
-                      height
-                    }
-                  }
-                }
                 Title
                 Text
               }

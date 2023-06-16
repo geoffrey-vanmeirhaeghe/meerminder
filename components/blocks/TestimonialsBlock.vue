@@ -1,49 +1,40 @@
 <template>
   <div class="container" :class="'spacing-' + Settings.Spacing">
-    <div class="flex flex-wrap -mx-4 justify-center">
       <div
-        v-for="Testimonial in Testimonials"
-        :key="Testimonial.id"
-        class="lg:w-1/2 2xl:w-1/4 flex-grow px-8 text-center justify-center max-w-lg mt-3"
+        class="w-full flex items-start"
       >
-        <div class="bg-gray-100 rounded-2xl p-8 my-10">
-          <ImageMolecule
-            v-if="Testimonial.Image.data"
-            :Image="Testimonial.Image"
-            class="w-24 h-24 rounded-full object-cover inline-flex self-center transform -mt-24"
-          />
-          <h4 v-if="Testimonial.Title" class="mt-3 text-base font-semibold">
-            {{ Testimonial.Title }}
-          </h4>
-          <TextMolecule
-            v-if="Testimonial.Text"
-            :Text="Testimonial.Text"
-            class="text-center mt-6"
-          />
-          <div
-            v-if="Testimonial.Author"
-            class="text-sm italic flex items-center justify-center mt-6 text-black"
-          >
-            <hr class="w-4 border-primary-500 mr-2 border" />
-            <span>{{ Testimonial.Author }}</span>
-          </div>
+      <svg class="w-64 h-auto absolute lg:relative opacity-10 lg:opacity-100" xmlns="http://www.w3.org/2000/svg" width="122.5" height="83.75" viewBox="0 0 122.5 83.75">
+        <path id="Path_18" data-name="Path 18" d="M73.75-175l-10,38.75v45H16.25v-45L47.5-175Zm65,0-10,38.75v45H81.25v-45L112.5-175Z" transform="translate(-16.25 175)" fill="#0033bf"/>
+      </svg>
+      <div class="ml-12 relative z-10">
+        <TextMolecule
+          v-if="Testimonials.Text"
+          :Text="Testimonials.Text"
+          class="mt-6 max-w-full wysiwyg-testimonial
+          "
+        />
+        <div
+          v-if="Testimonials.Author"
+          class="text-sm flex items-center mt-6 text-black"
+        >
+        <span class="font-bold text-primary-500">{{ Testimonials.Author }}</span>
+        <hr class="w-3 border-primary-500 mx-2 border" />
+        <span>{{ Testimonials.Title }}</span>
         </div>
       </div>
-    </div>
+      </div>
   </div>
 </template>
 
 <script>
 // Molecules
 import TextMolecule from "~/components/molecules/TextMolecule.vue";
-import ImageMolecule from "~/components/molecules/ImageMolecule.vue";
 
 export default {
   props: ["Testimonials", "Settings"],
 
   components: {
     TextMolecule,
-    ImageMolecule,
   },
 
   data() {

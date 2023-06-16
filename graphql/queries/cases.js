@@ -231,16 +231,6 @@ export const CaseQuery = gql`
             ... on ComponentBlocksTestimonials {
               TestimonialsTestimonial: Testimonial {
                 Author
-                Image {
-                  data {
-                    attributes {
-                      url
-                      alternativeText
-                      width
-                      height
-                    }
-                  }
-                }
                 Title
                 Text
               }

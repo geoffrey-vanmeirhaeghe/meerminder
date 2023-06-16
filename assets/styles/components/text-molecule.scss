@@ -4,4 +4,10 @@
             @apply font-light opacity-75 text-sm leading-6;
         }
     }
+
+    &-testimonial {
+        p, h1, h2, h3, h4, h5, h6 {
+            @apply text-5xl w-full max-w-full font-black uppercase leading-snug;
+        }
+    }
 }
