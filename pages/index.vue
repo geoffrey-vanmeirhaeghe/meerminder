@@ -12,7 +12,9 @@
           : ''
       "
     />
-    <Footer />
+    <Footer>
+      <BlogTeaser />
+    </Footer>
   </div>
 </template>
 
@@ -23,6 +25,7 @@ import { ModulePagesQuery } from "~/graphql/queries/module-pages";
 import Header from "~/components/partials/Header";
 import Footer from "~/components/partials/Footer";
 import ModulePageBlocks from "~/components/partials/ModulePageBlocks";
+import BlogTeaser from "~/components/partials/BlogTeaser";
 
 export default {
   name: "IndexPage",
@@ -32,6 +35,7 @@ export default {
     Header,
     Footer,
     ModulePageBlocks,
+    BlogTeaser,
   },
 
   apollo: {
