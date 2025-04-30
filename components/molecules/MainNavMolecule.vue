@@ -18,14 +18,12 @@
     >
       <a
         :href="'/' + Link.attributes.Slug"
-        class="no-underline"
+        class="no-underline text-black"
         :class=" [
             MobileNav
               ? 'font-semibold text-3xl block justify-between items-center w-full'
               : 'uppercase text-sm tracking-wider',
-            HeroActive
-            ? 'text-white'
-            : 'text-white lg:text-black',
+            
             setActiveState == '/' + Link.attributes.Slug ? 'active' : '',
           ]
         "
